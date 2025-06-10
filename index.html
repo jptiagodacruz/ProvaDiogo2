@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Twitter - Login / Registro</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="auth-container">
+    <!-- Container principal da tela de autenticação -->
+    <div class="brand-header">
+    <!-- Ícone do Twitter SVG -->
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="40" height="40" fill="#1da1f2">
+      <g>
+        <path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082 4.48 4.48 0 0 0-7.633 4.086A12.72 12.72 0 0 1 3.11 4.86a4.48 4.48 0 0 0 1.388 5.976 4.44 4.44 0 0 1-2.03-.561v.057a4.48 4.48 0 0 0 3.592 4.393 4.48 4.48 0 0 1-2.025.077 4.48 4.48 0 0 0 4.184 3.112A8.98 8.98 0 0 1 2 19.54a12.7 12.7 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.78 0-.195-.004-.39-.013-.583a9.14 9.14 0 0 0 2.24-2.33z"></path>
+      </g>
+    </svg>
+    <span class="brand-title">Mini-Twitter</span>
+  </div>
+    <section id="login-section">
+      <!-- Seção de login, visível inicialmente -->
+
+      <h1>Login</h1>
+      <!-- Título da seção de login -->
+
+      <span id="login-error" class="error-message" style="display:none"></span>
+      <!-- Mensagem de erro de login -->
+
+      <form id="login-form">
+        <!-- Formulário de login -->
+
+        <label for="login-email">Email</label>
+        <!-- Rótulo do campo de email -->
+        <input type="text" id="login-email" name="email" required />
+        <!-- Campo de entrada de texto para o email, obrigatório -->
+
+        <label for="login-password">Senha</label>
+        <!-- Rótulo do campo de senha -->
+        <input type="password" id="login-password" name="password" required />
+        <!-- Campo de entrada de senha, obrigatório -->
+
+        <button type="submit">Entrar</button>
+        <!-- Botão para enviar o formulário de login -->
+      </form>
+
+      <p>Não tem conta?
+        <!-- Texto indicando opção de registro -->
+        <button id="show-register" class="link-btn">Registre-se</button>
+        <!-- Botão que troca para a seção de registro -->
+      </p>
+    </section>
+
+    <section id="register-section" class="hidden">
+      <!-- Seção de registro (oculta inicialmente pela classe "hidden") -->
+
+      <h1>Registro</h1>
+      <!-- Título da seção de registro -->
+      
+      <span id="register-error" class="error-message" style="display:none"></span>
+      
+      <form id="register-form">
+        <!-- Formulário de registro -->
+
+        <label for="register-username">Nome de Usuário</label>
+        <!-- Rótulo para o nome de usuário -->
+        <input type="text" id="register-username" name="username" required minlength="3" />
+        <!-- Campo para digitar o nome de usuário, obrigatório e com mínimo de 3 caracteres -->
+
+        <label for="register-email">Email</label>
+        <!-- Rótulo para o email -->
+        <input type="email" id="register-email" name="email" required />
+        <!-- Campo de email com validação HTML5, obrigatório -->
+
+        <label for="register-password">Senha</label>
+        <!-- Rótulo para a senha -->
+        <input type="password" id="register-password" name="password" required minlength="6" />
+        <!-- Campo de senha com mínimo de 6 caracteres, obrigatório -->
+
+        <button type="submit">Registrar</button>
+        <!-- Botão para enviar o formulário de registro -->
+      </form>
+
+      <p>Já tem conta?
+        <!-- Texto indicando opção de login -->
+        <button id="show-login" class="link-btn">Faça login</button>
+        <!-- Botão que troca de volta para a seção de login -->
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Importa o controlador JS responsável por lidar com autenticação -->
+  <script type="module" src="js/controllers/authController.js"></script>
+</body>
+
+</html>

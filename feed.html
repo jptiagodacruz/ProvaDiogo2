@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Twitter - Feed</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres como UTF-8 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Configura a visualização para dispositivos móveis para melhor responsividade -->
+
+  <title>Mini Twitter - Feed</title>
+  <!-- Define o título da aba do navegador -->
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- Importa um CSS para resetar estilos padrões dos navegadores -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Importa o CSS principal do projeto para estilização da página -->
+</head>
+
+<body>
+  <!-- Início do corpo da página -->
+
+  <header>
+  <!-- Cabeçalho da página -->
+  <h1 style="display: flex; align-items: center; gap: 0.5em;">
+    <!-- Ícone do Twitter SVG -->
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="32" height="32" fill="#fff" style="vertical-align: middle;">
+      <g>
+        <path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082 4.48 4.48 0 0 0-7.633 4.086A12.72 12.72 0 0 1 3.11 4.86a4.48 4.48 0 0 0 1.388 5.976 4.44 4.44 0 0 1-2.03-.561v.057a4.48 4.48 0 0 0 3.592 4.393 4.48 4.48 0 0 1-2.025.077 4.48 4.48 0 0 0 4.184 3.112A8.98 8.98 0 0 1 2 19.54a12.7 12.7 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.78 0-.195-.004-.39-.013-.583a9.14 9.14 0 0 0 2.24-2.33z"></path>
+      </g>
+    </svg>
+    Mini-Twitter
+  </h1>
+  <!-- Título principal do site exibido no topo -->
+
+  <nav>
+    <!-- Barra de navegação -->
+    <a href="profile.html">Perfil</a>
+    <!-- Link que leva o usuário à página de perfil -->
+
+    <button id="logout-btn">Sair</button>
+    <!-- Botão que faz logout, limpando o token e redirecionando para login -->
+  </nav>
+</header>
+
+  <main class="feed-container">
+    <!-- Conteúdo principal do feed, envolvido por uma classe para estilização -->
+
+    <section class="create-post">
+      <!-- Seção responsável por criar novas postagens -->
+
+      <form id="post-form">
+        <!-- Formulário para criação de post -->
+
+        <textarea
+          id="post-content"
+          maxlength="280"
+          placeholder="O que está acontecendo?"
+          required
+        ></textarea>
+        <!-- Campo de texto com limite de 280 caracteres e preenchimento obrigatório -->
+
+        <div class="post-footer">
+          <!-- Rodapé do formulário com contador e botão -->
+
+          <span id="char-count">0 / 280</span>
+          <!-- Exibe o número de caracteres digitados em tempo real -->
+
+          <button type="submit">Publicar</button>
+          <!-- Botão para enviar a postagem -->
+        </div>
+      </form>
+    </section>
+
+    <section id="posts-list" class="posts-list">
+      <!-- Seção onde as postagens serão carregadas dinamicamente via JavaScript -->
+    </section>
+  </main>
+
+  <script type="module" src="js/controllers/feedController.js"></script>
+  <!-- Importa o arquivo JavaScript responsável por controlar a lógica do feed -->
+</body>
+</html>

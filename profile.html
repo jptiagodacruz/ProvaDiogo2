@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Twitter - Perfil</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Perfil do Usuário</h1>
+    <nav>
+      <!-- Menu de navegação -->
+      <a href="feed.html">Feed</a>
+      <!-- Link que leva de volta para o feed de postagens -->
+      <button id="logout-btn">Sair</button>
+      <!-- Botão que faz logout do usuário (limpa o token e redireciona para login) -->
+    </nav>
+  </header>
+  
+  <section class="profile-info">
+  <!-- Bloco de informações do usuário -->
+  <div class="user-info-block">
+    <span id="current-username" class="user-info-name"></span>
+    <span id="current-email" class="user-info-email"></span>
+  </div>
+  <!-- ...formulário de edição... -->
+</section>
+
+  <main class="profile-container">
+    <!-- Container principal da área de perfil -->
+
+    <section class="profile-info">
+      <!-- Seção com as informações do usuário (nome e email) -->
+
+      <h2>Informações do Perfil</h2>
+      <!-- Subtítulo da seção de informações do perfil -->
+
+      <form id="profile-form">
+        <!-- Formulário para editar dados do perfil -->
+
+        <label for="profile-username">Nome de Usuário</label>
+        <!-- Rótulo para o campo de nome de usuário -->
+        <input type="text" id="profile-username" name="username" required minlength="3" />
+        <!-- Campo de texto obrigatório com no mínimo 3 caracteres -->
+
+        <label for="profile-email">Email</label>
+        <!-- Rótulo para o campo de email -->
+        <input type="email" id="profile-email" name="email" required />
+        <!-- Campo de email obrigatório com validação HTML5 -->
+
+        <button type="submit">Salvar</button>
+        <!-- Botão que envia o formulário para atualizar os dados -->
+      </form>
+    </section>
+
+    <section class="user-posts">
+      <!-- Seção que exibe as postagens do usuário -->
+
+      <h2>Minhas Postagens</h2>
+      <!-- Subtítulo da seção de postagens -->
+
+      <div id="user-posts-list" class="posts-list">
+        <!-- Div onde as postagens do usuário serão renderizadas dinamicamente via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Importa o controlador responsável pelas ações da página de perfil -->
+  <script type="module" src="js/controllers/profileControllers.js"></script>
+</body>
+</html>
