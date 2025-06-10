@@ -71,5 +71,5 @@ mini-twitter/
 
 1. Clone o repositório:
    ```bash
-   git clone:https://github.com/Gantt-sucessor/Prova2-Diogo.git
+   git clone:https://github.com/jptiagodacruz/ProvaDiogo2.git
 
